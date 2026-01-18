@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Admission Portal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🎓 University Admission Portal</h2>
+    <div>
+        <a href="/">Student</a>
+        <a href="/admin">Admin</a>
+        <a href="/merit">Merit</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">{{ messages[0] }}</div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- THIS LINE IS CRITICAL -->
+    {% block content %}{% endblock %}
+
+</div>
+
+</body>
+</html>

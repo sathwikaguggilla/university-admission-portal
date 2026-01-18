@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Student Registration</h3>
+
+<form action="/submit" method="post" autocomplete="off">
+    <input name="name" placeholder="Name"><br><br>
+    <input name="email" placeholder="Email"><br><br>
+    <input name="marks" placeholder="Marks"><br><br>
+    <input name="entrance" placeholder="Entrance"><br><br>
+    <input name="age" placeholder="Age"><br><br>
+
+    <select name="dept">
+        <option value="CS">CSE</option>
+        <option value="Mech">Mech</option>
+        <option value="Civil">Civil</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}
